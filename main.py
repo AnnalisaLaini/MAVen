@@ -12,3 +12,9 @@ holidays = hapi.holidays({
   'country': 'IT',
   'year': '2021',
 })
+
+'''
+Lab of Sofware Project Development 2021/2022
+
+Implementation of methods to deal with a calendar that lists holidays
+''
