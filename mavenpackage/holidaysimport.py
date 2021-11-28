@@ -1,8 +1,5 @@
-
-
-
 '''
-this module is meant to import holidays data from calendarific API and turn it into csv format 
+THIS MODULE IS MEANT TO IMPORT HOLIDAYS DATA FROM CALENDARIFIC API AND TURN IT INTO CSV FORMAT.
 '''
 
 '''
@@ -15,6 +12,9 @@ from dateutil.parser import parse
 import pandas as pd
 import csv
 
+'''
+uploading data from API source using the API key; csv format is used to handle the dataset.
+'''
 
 API_KEY = '6981d02afb34fb0d7f67b5ad93491ab8283a7773'
 
