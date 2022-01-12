@@ -1,8 +1,8 @@
 import unittest
 import sys
 import os
-from mavenpackage import return_event.py
-from return_event.py import return_event
+from mavenpackage import return_event
+
 
 
 '''
@@ -17,19 +17,19 @@ class TestInput(unittest.TestCase):
     # smoke test: valid inputs
     def test_correct_values(self):
         # you should select some valid inputs, for which the output is known
-        self.assertEqual(return_event("2023-12-26"), 'St. Stephen's Day')
+        self.assertEqual(return_event.return_event("2023-12-26"), "St. Stephen's Day")
 
     # invalid inputs
     def test_wrong_values(self):
         # you should input wrong data
-        self.assertEqual(return_event("St. Stephen's Day"), None)
+        self.assertEqual(return_event.return_event("St. Stephen's Day"), None)
 
         # Note: the following test passing an empty list will fail!
-        # self.assertEqual(return_event([]), None)
+        # self.assertEqual(return_event.return_event([]), None)
 
     # corner case: empty string
     def test_empty_string(self):
-        self.assertEqual(return_event(""), None)
+        self.assertEqual(return_event.return_event(""), None)
 
 # code that runs the document if called
 if __name__ == '__main__':
