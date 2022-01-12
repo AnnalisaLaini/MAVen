@@ -1,3 +1,12 @@
+
+''' 
+the weekday function returns the day’s name, given the date inputted by the user
+
+''' 
+
+
+
+
 import datetime
 
 def weekday(date_str):
