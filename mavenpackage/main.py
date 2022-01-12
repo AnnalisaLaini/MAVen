@@ -96,13 +96,15 @@ def parse_leapyear():
 With argparse we are once again parsing the arguments to be passed to the weekday function.
 With this particular function we need a positional argument which allows the user to input the desired date.
 '''
+
+def weekday():
 #we create the parser
 parser = argparse.ArgumentParser(description='Given date returns the day of the week ')
 #we add the argument required
 parser.add_argument("--wday", type=str,  help="insert the date in yyyy-mm-dd format")
 #we  run it
 args = parser.parse_args()
-return weekday(args)
+    return weekday(args)
 
 
 
