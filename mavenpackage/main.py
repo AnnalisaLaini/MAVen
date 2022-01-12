@@ -3,6 +3,7 @@ import argparse
 from return_event.py import return_event 
 from italianceleb.py import italianceleb
 from leapyear.py import leapyear
+from weekday.py import weekday
 
 
 
@@ -88,3 +89,18 @@ def parse_leapyear():
     #run the argument 
     args = parser.parse_args()
     return leapyear(args)
+    
+    
+      
+''' 
+With argparse we are once again parsing the arguments to be passed to the weekday function.
+With this particular function we need a positional argument which allows the user to input the desired date.
+'''
+#we create the parser
+ parser = argparse.ArgumentParser(description='Given date returns the day of the week ')
+#we add the argument required
+parser.add_argument("--wday", type=str,  help="insert the date in yyyy-mm-dd format")
+#we  run it
+ args = parser.parse_args()
+   return weekday(args)
+
