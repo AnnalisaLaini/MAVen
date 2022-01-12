@@ -21,6 +21,6 @@ def weekday(date_str):
     day_of_the_week = weekDays[date_obj_day]
     #we print the outcome
     
-    print("The input date is on a {}".format(day_of_the_week))
+    print("The requested date is on a {}".format(day_of_the_week))
 
 
