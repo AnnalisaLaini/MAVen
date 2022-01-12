@@ -69,3 +69,21 @@ if __name__ == "__main__":
     holidays_df = pd.DataFrame(holiday_list)
     holidays_df.to_csv('holiday.csv', sep=',', encoding='utf-8', index=False, quoting=csv.QUOTE_ALL, quotechar='"')
     # print(holidays_df)
+
+
+# performing some data manipulation to adjust the dataframe
+
+df = pd.DataFrame(holiday_list)
+# print(df)
+
+date_event = df[["ds", "holiday"]]
+# date_event
+
+dates_list = date_event["ds"]
+events_list = date_event["holiday"]
+
+dtvnt = dict(zip(dates_list, events_list))
+# dtvnt
+
+dtvnt = dict(zip(date_event.ds, date_event.holiday))
+# dtvnt
