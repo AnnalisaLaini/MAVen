@@ -1,8 +1,7 @@
 import unittest
 import sys
 import os
-from mavenpackage import weekday.py
-from weekday.py import weekday
+from mavenpackage import weekday
 
 
 
