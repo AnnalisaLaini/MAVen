@@ -2,6 +2,7 @@ from holidaysimport.py import holidays_df
 import argparse
 from return_event.py import return_event 
 from italianceleb.py import italianceleb
+from leapyear.py import leapyear
 
 
 
@@ -71,5 +72,19 @@ def parseholidays():
     args = parser.parse_args()
     return italianceleb(args.date)
 
+
     
+# we use argparse to parse the arguments through the leapyear function
+
+# define a function relying on the argparse module 
+def parse_leapyear():
     
+    #create the parser
+    parser = argparse.ArgumentParser(description='Given year returns whether it is a leapyear or not')
+    
+    #add the argument required
+    parser.add_argument("year", type=str,  help="insert the year in yyyy format")
+    
+    #run the argument 
+    args = parser.parse_args()
+    return leapyear(args)
