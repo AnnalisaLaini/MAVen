@@ -5,7 +5,7 @@ from mavenpackage import italianceleb.py
 from italianceleb.py import italianceleb
 
 
-''''
+'''
 The following tests are applied to the italianceleb function.
 First, valid entries are tested: the function receives expected inputs.
 Next, the function is given invalid entries and its reaction is checked.
