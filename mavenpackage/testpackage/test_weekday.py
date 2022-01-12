@@ -16,14 +16,14 @@ class TestInput(unittest.TestCase):
 
     def test_correct_values(self):
         # you should select some valid inputs, for which the output is known
-        self.assertEqual(weekday("Monday"), "2022-01-10")       
+        self.assertEqual(weekday.weekday("Monday"), "2022-01-10")       
     
     # invalid inputs
 
     def test_wrong_values(self):
         # you should input wrong data
-        self.assertEqual(weekday("2022-05-10"), "Wednesday")  
-        self.assertEqual(weekday("seven"), "None") 
+        self.assertEqual(weekday.weekday("2022-05-10"), "Wednesday")  
+        self.assertEqual(weekday.weekday("seven"), "None") 
 
        #NOTE: the folowing test passing an empty list will fail!
        #self.assertEqual (weekday(), None)  
@@ -31,7 +31,7 @@ class TestInput(unittest.TestCase):
 
     # corner case: empty string
     def test_empty_string(self):
-        self.assertEqual(weekday(""), None)
+        self.assertEqual(weekday.weekday(""), None)
 
 #code that runs the document if called
 if __name__ == '__main__':
