@@ -11,12 +11,12 @@ class TestInput(unittest.TestCase):
         self.assertEqual(leapyear.leapyear("2000"), "'{0} is a leap year'.format(year)")
     
      #wrong inputs 
-    def test_not_leapyear(self):
+    def test_not_leapyear1(self):
          # you should input wrong data
         self.assertEqual(leapyear("hello"), None)         
 
 	#wrong inputs 
-    def test_not_leapyear(self):
+    def test_not_leapyear2(self):
          # you should input wrong data
         self.assertEqual(leapyear.leapyear("twothousand"), None)
 
