@@ -14,8 +14,9 @@ def countdown(date_str):
 
  try:
      date_obj = datetime.datetime.strptime(date_str, '%Y-%m-%d').date()
- except ValueError:
-     raise ValueError("Incorrect data format, should be YYYY-MM-DD")
+ except:
+     print("Incorrect data format, should be YYYY-MM-DD")
+     return
 
  #we transform the string inputted by the user to a datetime object and we consider only the date part
  date_obj = datetime.datetime.strptime(date_str, '%Y-%m-%d').date()
