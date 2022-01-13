@@ -15,13 +15,13 @@ class TestInput(unittest.TestCase):
    # invalid inputs
    def test_wrong_values(self):
        # you should input wrong data
-       self.assertEqual(countdown("2022-01-32"), None)
-       self.assertEqual(countdown("hello"), None)
-       self.assertEqual(countdown("67"), None)
+       self.assertEqual(countdown.countdown("2022-01-32"), None)
+       self.assertEqual(countdown.countdown("hello"), None)
+       self.assertEqual(countdown.countdown("67"), None)
 
    # corner case: empty string
    def test_empty_string(self):
-       self.assertEqual(countdown(""), None)
+       self.assertEqual(countdown.countdown(""), None)
 
 # code that runs the document if called
 if __name__ == '__main__':
