@@ -7,23 +7,24 @@ from leapyear.py import leapyear
 from weekday.py import weekday
 from countdown.py import countdown
 
-
-
 '''
-the welcome function is an automated function that prints a welcome message when the user opens the program
+The welcome function is an automated function that prints a welcome message
+when the user opens the program
 '''
+
 
 def welcome():
-    #we define the message and we associate the list of the events known by the software. We list those through the use of a dictionary.
-    print("Welcome to 'Holidays Project\'. We know the dates of the following events:")
+    # We define the message and we associate the list of the events known by
+    # the software. We list those through the use of a dictionary.
+    print("Welcome to 'Holidays Project\'.")
+    print("We know the dates of the following events:")
     L = []
-    for k,v in dtvnt.items():
+    for k, v in dtvnt.items():
         if v not in L:
             L.append(v)
     return L
 
 welcome()
-
 
 
 '''
@@ -39,17 +40,20 @@ The ‘choices’ argument lists valid entries to give as an input.
 # First, a list of valid entries is set.
 valid_dates = dtvnt.keys()
 
+
 # Then, a function relying on the argparse module is defined.
 def parse_arguments():
 
-# note: a description of the functionality is included.
-    parser = argparse.ArgumentParser(description='A program to pass dates to the return_event function')
+    # Note: a description of the functionality is included.
+    parser = argparse.ArgumentParser(description="A program to pass dates to \
+    the return_event function")
 
-# positional and optional arguments are set.
-    parser.add_argument("date", help="The string of the date in the form yyyy-mm-dd", choices=valid_dates)
+    # Positional and optional arguments are set.
+    parser.add_argument("date", help="The string of the date in the \
+    form yyyy-mm-dd", choices=valid_dates)
+
     args = parser.parse_args()
     return return_event(args.date)
-
 
 
 '''
@@ -64,67 +68,81 @@ The ‘help’ argument calls for user support in setting valid entries.
 # First, a list of valid entries is set.
 itaholidays = dtvnt.values()
 
+
 # Then, a function relying on the argparse module is defined.
 def parseholidays():
 
-# note: a description of the functionality is included.
-    parser = argparse.ArgumentParser(description='A program to pass holidays names to the italianceleb function')
+    # Note: a description of the functionality is included.
+    parser = argparse.ArgumentParser(description="A program to pass holidays \
+    names to the italianceleb function")
 
-# positional and optional arguments are set.
-    parser.add_argument("holiname", help="The string of the holiday name", choices=itaholidays)
+    # Positional and optional arguments are set.
+    parser.add_argument("holiname", help="The string of the holiday name",
+                        choices=itaholidays)
+
     args = parser.parse_args()
     return italianceleb(args.date)
 
 
-
 '''
-we use argparse to parse the arguments through the leapyear function
+We use argparse to parse the arguments through the leapyear function
 '''
 
-# define a function relying on the argparse module
+
+# Define a function relying on the argparse module
 def parse_leapyear():
 
-    #create the parser
-    parser = argparse.ArgumentParser(description='Given year returns whether it is a leapyear or not')
+    # Create the parser
+    parser = argparse.ArgumentParser(description="Given year returns whether \
+    it is a leapyear or not")
 
-    #add the argument required
-    parser.add_argument("year", type=str,  help="insert the year in yyyy format")
+    # Add the argument required
+    parser.add_argument("year", type=str,  help="Insert the year in yyyy \
+    format")
 
-    #run the argument
+    # Run the argument
     args = parser.parse_args()
     return leapyear(args)
 
 
+'''
+With argparse we are once again parsing the arguments to be passed to the
+weekday function.
+With this particular function we need a positional argument which allows the
+user to input the desired date.
+'''
 
-'''
-With argparse we are once again parsing the arguments to be passed to the weekday function.
-With this particular function we need a positional argument which allows the user to input the desired date.
-'''
 
 def weekday():
-    #we create the parser
-    parser = argparse.ArgumentParser(description='Given date returns the day of the week ')
-    #we add the argument required
-    parser.add_argument("--wday", type=str,  help="insert the date in yyyy-mm-dd format")
-    #we  run it
+    # We create the parser
+    parser = argparse.ArgumentParser(description='Given date returns the day \
+    of the week ')
+
+    # We add the argument required
+    parser.add_argument("--wday", type=str,  help="insert the date in \
+    yyyy-mm-dd format")
+
+    # We  run it
     args = parser.parse_args()
     return weekday(args)
-
 
 
 '''
 With argparse we are parsing the arguments through the countdown function
 '''
-#First, a function relying on the argparse module is defined
+
+
+# First, a function relying on the argparse module is defined
 def countdownparser():
 
-   #We create the parser with a description of the functionality
-   parser = argparse.ArgumentParser(description='Countdown to a specific date')
+    # We create the parser with a description of the functionality
+    parser = argparse.ArgumentParser(description="Countdown to a specific \
+    date")
 
-   #We add the argument
-   parser.add_argument('--to-date', metavar='YYYY-MM-DD', type=str,
-   help='Insert the date in format YYYY-MM-DD')
+    # We add the argument
+    parser.add_argument("--to-date", metavar="YYYY-MM-DD", type=str,
+                        help="Insert the date in format YYYY-MM-DD")
 
-   #We run it
-   args = parser.parse_args()
-   return countdown(args)
+    # We run it
+    args = parser.parse_args()
+    return countdown(args)
