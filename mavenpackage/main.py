@@ -115,8 +115,8 @@ user to input the desired date.
 
 def weekday():
     # We create the parser
-    parser = argparse.ArgumentParser(description='Given date returns the day \
-    of the week ')
+    parser = argparse.ArgumentParser(description="Given date returns the day \
+    of the week")
 
     # We add the argument required
     parser.add_argument("--wday", type=str,  help="insert the date in \
