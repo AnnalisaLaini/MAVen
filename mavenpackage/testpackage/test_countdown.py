@@ -19,9 +19,6 @@ class TestInput(unittest.TestCase):
        self.assertEqual(countdown("hello"), None)
        self.assertEqual(countdown("67"), None)
 
-   # NOTE: the following test passing an empty list will fail!
-   # self.assertEqual(countdown([]), None)
-
    # corner case: empty string
    def test_empty_string(self):
        self.assertEqual(countdown(""), None)
