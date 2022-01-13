@@ -77,7 +77,9 @@ def parseholidays():
 
 
 
-# we use argparse to parse the arguments through the leapyear function
+'''
+we use argparse to parse the arguments through the leapyear function
+'''
 
 # define a function relying on the argparse module
 def parse_leapyear():
@@ -110,6 +112,9 @@ def weekday():
 
 
 
+'''
+With argparse we are parsing the arguments through the countdown function
+'''
 #First, a function relying on the argparse module is defined
 def countdownparser():
 
