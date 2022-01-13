@@ -1,3 +1,4 @@
+
 from holidaysimport import dtvnt
 
 
@@ -9,14 +10,17 @@ The dtvnt list of holidays is used to verify the presence/absence of an entry.
 The function can only return events that occur on dtvnt dates.
 '''
 
-def return_event(date):
 
-    # First, the presence of the date in the list of known occurrences is checked.
-    # If the input date is included in the dtvnt list, the matched event is returned.
+def return_event(date):
+    # First, the presence of the date in the list of
+    # known occurrences is checked.
+    # If the input date is included in the dtvnt list,
+    # the matched event is returned.
     if date in dtvnt:
         print('{} is {}.'.format(date, dtvnt[date]))
 
-    # If the input date is not included in the dtvnt list, no event is returned.
+    # If the input date is not included in the dtvnt list,
+    # no event is returned.
     # Instead, an apologizing message appears.
     else:
-        print('Sadly, we don\'t know what is celebrated on {}\.'.format(date))
+        print("Sadly, we don\'t know what is celebrated on {}\.".format(date))
