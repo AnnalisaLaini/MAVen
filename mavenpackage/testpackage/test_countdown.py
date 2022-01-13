@@ -12,12 +12,6 @@ The standard testing order is followed.
 
 class TestInput(unittest.TestCase):
 
-   # smoke test: valid inputs
-   def test_correct_values(self):
-       # you should select some valid inputs, for which the output is known
-       one_year_ago = datetime.date.today() - relativedelta(years=1)
-       self.assertEqual(countdown(one_year_ago, "365 days have passed since the input date"))
-
    # invalid inputs
    def test_wrong_values(self):
        # you should input wrong data
