@@ -11,26 +11,27 @@ Next, the function is given invalid entries and its reaction is checked.
 Then, the performance when no inputs are provided is evaluated.
 '''
 
+
 class TestInput(unittest.TestCase):
 
-    # smoke test: valid inputs
+    # Smoke test: valid inputs
     def test_italianholidays(self):
         # you should select some valid inputs, for which the output is known
-        self.assertEqual(italianceleb.italianceleb("All Saints' Day"), "Yup, {} is an Italian holiday!".format(someholi))
+        self.assertEqual(italianceleb.italianceleb("All Saints' Day"), "Yup, \
+        {} is an Italian holiday!".format(someholi))
 
-    # invalid inputs
+    # Invalid inputs
     def test_nonitalian(self):
-        # you should input wrong data
+        # You should input wrong data
         self.assertEqual(italianceleb.italianceleb("Thanksgiving Day"), None)
 
         # Note: the following test passing an empty list will fail!
         # self.assertEqual(italianceleb([]), None)
 
-    # corner case: empty string
+    # Corner case: empty string
     def test_emptyentry(self):
         self.assertEqual(italianceleb.italianceleb(""), None)
 
-# code that runs the document if called
-if __name__ == '__main__':
+# Code that runs the document if called
+if __name__ == "__main__":
     unittest.main()
-
