@@ -23,6 +23,7 @@ class TestInput(unittest.TestCase):
         def test_empty_string(self):
             self.assertEqual(countdown.countdown(""), None)
 
+
 # Code that runs the document if called
 if __name__ == "__main__":
     unittest.main()
