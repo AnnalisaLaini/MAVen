@@ -15,14 +15,12 @@ def countdown(date_str):
 
     try:
         date_obj = datetime.datetime.strptime(date_str, "%Y-%m-%d").date()
-    except:
+    except ValueError:
         print("Incorrect data format, should be YYYY-MM-DD")
         return
 
     # We transform the string inputted by the user to a datetime object
     # and we consider only the date part
-
-
     date_obj = datetime.datetime.strptime(date_str, "%Y-%m-%d").date()
 
     # We compute the difference in days between the date inputted by the user
@@ -41,7 +39,8 @@ def countdown(date_str):
         The date you input refers to today".format(diff))
 
     elif diff < 0:
-        # If the difference is smaller than 0, we take the absolute value of the
-        # difference in days and we print the number of days passed since that day
+        # If the difference is smaller than 0, we take the absolute value of
+        # the difference in days and we print the number of days passed since
+        # that day
         diff = abs(diff)
         print("{} days have passed since the input date".format(diff))
