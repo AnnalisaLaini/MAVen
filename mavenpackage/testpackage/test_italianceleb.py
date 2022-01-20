@@ -32,6 +32,7 @@ class TestInput(unittest.TestCase):
     def test_emptyentry(self):
         self.assertEqual(italianceleb.italianceleb(""), None)
 
+
 # Code that runs the document if called
 if __name__ == "__main__":
     unittest.main()
