@@ -19,9 +19,9 @@ class TestInput(unittest.TestCase):
         year'.format(year)")
 
     # Wrong inputs
-    def test_not_leapyear1(self):
+    def test_not_leapyear(self):
         # You should input wrong data
-        self.assertEqual(leapyear("hello"), None)
+        self.assertEqual(leapyear.leapyear("hello"), None)
         self.assertEqual(leapyear.leapyear("twothousand"), None)
 
     # Corner case: empty string
