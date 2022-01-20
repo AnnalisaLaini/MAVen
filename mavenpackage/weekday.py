@@ -13,7 +13,7 @@ def weekday(date_str):
     # We transform the string to a datetime object
     try:
         date_obj = datetime.datetime.strptime(date_str, "%Y-%m-%d").date()
-    except:
+    except ValueError:
         print("Incorrect data format, should be YYYY-MM-DD")
         return
     # weekday() returns the day of the week as an integer number,
