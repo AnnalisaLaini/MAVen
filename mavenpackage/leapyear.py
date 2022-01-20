@@ -15,6 +15,9 @@ divisible by 400.
 '''
 
 
+import datetime
+
+
 def leapyear(year):
     # year divided by 4 is a leapyear
     if (year % 4) == 0:
@@ -31,10 +34,18 @@ def leapyear(year):
         return False
 
 
-year = int(input("Enter the number: "))
+year = input("Enter the year: ")
 
-# input the year in the function and print the output
-if(leapyear(year)):
-    print("{0} is a leap year".format(year))
-else:
-    print("{0} is not a leap year". format(year))
+isValidDate = True
+try:
+    year = datetime.datetime(int(year), 1, 1).year
+except ValueError:
+    isValidDate = False
+    print("Input date is not valid")
+
+if (isValidDate):
+    # Input the year in the function and print the output
+    if(leapyear(year)):
+        print("{0} is a leap year".format(year))
+    else:
+        print("{0} is not a leap year".format(year))
