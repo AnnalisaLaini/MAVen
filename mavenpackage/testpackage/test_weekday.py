@@ -32,6 +32,7 @@ class TestInput(unittest.TestCase):
         with self.assertRaises(TypeError):
             weekday()
 
+
 # Code that runs the document if called
 if __name__ == "__main__":
     unittest.main()
