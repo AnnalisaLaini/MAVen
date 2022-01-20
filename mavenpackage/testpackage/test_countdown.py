@@ -20,8 +20,8 @@ class TestInput(unittest.TestCase):
         self.assertEqual(countdown.countdown("67"), None)
 
         # Corner case: empty string
-        def test_empty_string(self):
-            self.assertEqual(countdown.countdown(""), None)
+    def test_empty_string(self):
+        self.assertEqual(countdown.countdown(""), None)
 
 
 # Code that runs the document if called
