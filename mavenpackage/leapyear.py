@@ -19,33 +19,23 @@ import datetime
 
 
 def leapyear(year):
+    isValidDate = True
+    try:
+        year = datetime.datetime(int(year), 1, 1).year
+    except ValueError:
+        isValidDate = False
+        return "Input date is not valid"
+
+    # year divided by 100 means it is a century year
+    # century year divided by 400 is a leap year
+    if (year % 400 == 0) and (year % 100 == 0):
+        return "{0} is a leap year".format(year)
+    
     # year divided by 4 is a leapyear
-    if (year % 4) == 0:
-        # year divided by 100 means it is a century year
-        if (year % 100) == 0:
-            # century year divided by 400 is a leap year
-            if (year % 400) == 0:
-                return True
-            else:
-                return False
-        else:
-            return True
+    # not divided by 100 means that it is not a century year
+    elif (year % 4 == 0) and (year % 100 != 0):
+        return "{0} is a leap year".format(year)
+
     else:
-        return False
+        return "{0} is not a leap year".format(year)
 
-
-year = input("Enter the year: ")
-
-isValidDate = True
-try:
-    year = datetime.datetime(int(year), 1, 1).year
-except ValueError:
-    isValidDate = False
-    print("Input date is not valid")
-
-if (isValidDate):
-    # Input the year in the function and print the output
-    if(leapyear(year)):
-        print("{0} is a leap year".format(year))
-    else:
-        print("{0} is not a leap year".format(year))
