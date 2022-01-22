@@ -23,14 +23,14 @@ class TestInput(unittest.TestCase):
     # Invalid inputs
     def test_wrong_values(self):
         # You should input wrong data
-        self.assertEqual(return_event.return_event("St. Stephen's Day"), None)
+        self.assertEqual(return_event.return_event("St. Stephen's Day"), "Sadly, we don\'t know what is celebrated on St. Stephen's Day")
 
         # Note: the following test passing an empty list will fail!
         # self.assertEqual(return_event.return_event([]), None)
 
     # Corner case: empty string
     def test_empty_string(self):
-        self.assertEqual(return_event.return_event(""), None)
+        self.assertEqual(return_event.return_event(""), "Sadly, we don\'t know what is celebrated on")
 
 
 # Code that runs the document if called
