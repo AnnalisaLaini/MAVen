@@ -29,7 +29,7 @@ class TestInput(unittest.TestCase):
     def test_wrongvalues(self):
        # You should input wrong data
        self.assertEqual(italianceleb.italianceleb("78"), "Nope"+
-       ", Italians do not celebrate 78."))
+       ", Italians do not celebrate 78.")
 
     # Corner case: empty string
     def test_emptyentry(self):
