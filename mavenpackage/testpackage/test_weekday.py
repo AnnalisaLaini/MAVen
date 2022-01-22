@@ -16,23 +16,30 @@ class TestInput(unittest.TestCase):
 
     def test_correct_values(self):
         # You should select some valid inputs, for which the output is known
-        self.assertEqual(weekday.weekday("2022-1-10"), "0")
+        self.assertEqual(weekday.weekday("2022-1-10"),
+                         "The requested date" + " is on a Monday")
 
     # Invalid inputs
     def test_wrong_values(self):
         # You should input wrong data
-        self.assertEqual(weekday.weekday("Wednesday"), None)
-        self.assertEqual(weekday.weekday("seven"), None)
+        self.assertEqual(weekday.weekday("Wednesday"),
+                         "Incorrect data format" +
+                         ", should be YYYY-MM-DD")
+        self.assertEqual(weekday.weekday("seven"),
+                         "Incorrect data format" +
+                         ", should be YYYY-MM-DD")
 
         # NOTE: the folowing test passing an empty list will fail!
         # self.assertEqual (weekday.weekday(), None)
 
     # Corner case: empty string
     def test_empty_string(self):
-        with self.assertRaises(TypeError):
-            weekday()
-
+        self.assertEqual(weekday.weekday(""),
+                         "Incorrect data format" +
+                         ", should be YYYY-MM-DD")
 
 # Code that runs the document if called
+
+
 if __name__ == "__main__":
     unittest.main()
