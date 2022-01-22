@@ -17,10 +17,10 @@ def return_event(date):
     # If the input date is included in the dtvnt list,
     # the matched event is returned.
     if date in dtvnt:
-        print('{} is {}.'.format(date, dtvnt[date]))
+        return'{} is {}.'.format(date, dtvnt[date])
 
     # If the input date is not included in the dtvnt list,
     # no event is returned.
     # Instead, an apologizing message appears.
     else:
-        print("Sadly, we don\'t know what is celebrated on {}\.".format(date))
+        return "Sadly, we don\'t know what is celebrated on {}".format(date)
