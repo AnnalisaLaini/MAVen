@@ -1,5 +1,4 @@
-
-from holidaysimport import dtvnt
+from mavenpackage import holidaysimport
 
 
 '''
@@ -16,8 +15,8 @@ def return_event(date):
     # known occurrences is checked.
     # If the input date is included in the dtvnt list,
     # the matched event is returned.
-    if date in dtvnt:
-        return'{} is {}.'.format(date, dtvnt[date])
+    if date in holidaysimport.dtvnt:
+        return'{} is {}.'.format(date, holidaysimport.dtvnt[date])
 
     # If the input date is not included in the dtvnt list,
     # no event is returned.
