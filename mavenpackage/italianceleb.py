@@ -1,6 +1,4 @@
-
-
-from holidaysimport import dtvnt
+from mavenpackage import holidaysimport
 
 '''
 The italianceleb function tells whether an event is or not an Italian holiday.
@@ -14,7 +12,7 @@ Otherwise, the function does not recognize it as such.
 
 
 def italianceleb(someholi):
-    if someholi in dtvnt.values():
+    if someholi in holidaysimport.dtvnt.values():
         return "Yup, {} is an Italian holiday!".format(someholi)
     else:
         return "Nope, Italians do not celebrate {}.".format(someholi)
