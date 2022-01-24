@@ -1,11 +1,10 @@
-from holidaysimport.py import holidays_df
-from holidaysimport.py import dtvnt
+from holidaysimport import dtvnt
 import argparse
-from return_event.py import return_event
-from italianceleb.py import italianceleb
-from leapyear.py import leapyear
-from weekday.py import weekday
-from countdown.py import countdown
+from return_event import return_event
+from italianceleb import italianceleb
+from leapyear import leapyear
+from weekday import weekday
+from countdown import countdown
 
 '''
 The welcome function is an automated function that prints a welcome message
