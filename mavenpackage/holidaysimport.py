@@ -23,7 +23,7 @@ def CalHolidays(parameters):
     data = json.loads(response.text)
 
     if response.status_code != 200:
-        if data.in('error') is False:
+        if datain('error') is False:
             data['error'] = 'Unknown error.'
 
     return data
