@@ -1,4 +1,4 @@
-from mavenpackage import holidaysimport
+import holidaysimport
 
 '''
 The italianceleb function tells whether an event is or not an Italian holiday.

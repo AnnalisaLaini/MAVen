@@ -1,4 +1,4 @@
-from mavenpackage import holidaysimport
+import holidaysimport
 
 
 '''
