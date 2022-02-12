@@ -7,7 +7,10 @@ import countdown
 
 def parsing_input():
 
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(description="The program works with dates and italian holidays.\
+                                                 Please insert dates in the yyyy-mm-dd format and, if the name of an\
+                                                 holiday contains spaces, wrap the name around quotes ("")")
+
 
     parser.add_argument("--date",
                         help="Date for which you want to know if there is an event.\
@@ -15,7 +18,8 @@ def parsing_input():
 
 
     parser.add_argument("--holiname",
-                        help="Name of the holiday to know if it is an italian celebration or not.")
+                        help="Name of the holiday to know if it is an italian celebration or not.\
+                             If the name of the holiday contains spaces, please wrap it around quotes ("")")
 
     parser.add_argument("--year",
                         help="Enter a year to know if it is a leap year or not.")
