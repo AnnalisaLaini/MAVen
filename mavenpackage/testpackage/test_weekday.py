@@ -1,7 +1,5 @@
 import unittest
-import sys
-import os
-from mavenpackage import weekday
+import weekday
 
 
 '''
