@@ -1,147 +1,63 @@
-from holidaysimport import dtvnt
 import argparse
-from return_event import return_event
-from italianceleb import italianceleb
-from leapyear import leapyear
-from weekday import weekday
-from countdown import countdown
+import return_event
+import italianceleb
+import leapyear
+import weekday
+import countdown
 
-'''
-The welcome function is an automated function that prints a welcome message
-when the user opens the program
-'''
+def parsing_input():
 
+    parser = argparse.ArgumentParser()
 
-def welcome():
-    # We define the message and we associate the list of the events known by
-    # the software. We list those through the use of a dictionary.
-    print("Welcome to 'Holidays Project\'.")
-    print("We know the dates of the following events:")
-    L = []
-    for k, v in dtvnt.items():
-        if v not in L:
-            L.append(v)
-    return L
-
-welcome()
+    parser.add_argument("--date",
+                        help="Date for which you want to know if there is an event.\
+                             Please insert the date in the yyyy-mm-dd format.")
 
 
-'''
-Argparse is here used to parse arguments to the return_event function.
-Arguments are user inputs that are supposed to activate the function.
-The return_event function expects one positional argument, i.e. date.
-The date is a necessary entry to get the function output.
-Additionally, the user can input some other arguments.
-The ‘help’ argument calls for user support in setting valid entries.
-The ‘choices’ argument lists valid entries to give as an input.
-'''
+    parser.add_argument("--holiname",
+                        help="Name of the holiday to know if it is an italian celebration or not.")
 
-# First, a list of valid entries is set.
-valid_dates = dtvnt.keys()
+    parser.add_argument("--year",
+                        help="Enter a year to know if it is a leap year or not.")
 
+    parser.add_argument("--wday",
+                        help="Enter a date to know the corresponding weekday. \
+                             Please insert the date in the yyyy-mm-dd format.")
 
-# Then, a function relying on the argparse module is defined.
-def parse_arguments():
+    parser.add_argument("--todate",
+                        help="Enter a date to know the countdown")
 
-    # Note: a description of the functionality is included.
-    parser = argparse.ArgumentParser(description="A program to pass dates to \
-    the return_event function")
-
-    # Positional and optional arguments are set.
-    parser.add_argument("date", help="The string of the date in the \
-    form yyyy-mm-dd", choices=valid_dates)
 
     args = parser.parse_args()
-    return return_event(args.date)
+
+    holiday = args.holiname
+    year = args.year
+    dayoftheweek = args.wday
+    countd = args.todate
+
+    if args.date:
+        print(return_event.return_event(args.date))
+
+    elif args.holiname:
+        print(italianceleb.italianceleb(holiday))
+
+    elif args.year:
+        print(leapyear.leapyear(year))
+
+    elif args.wday:
+        print(weekday.weekday(dayoftheweek))
+
+    elif args.todate:
+        print(countdown.countdown(countd))
 
 
-'''
-Now, argparse is used to parse arguments to the italianceleb function.
-Arguments are user inputs that are supposed to activate the function.
-The italianceleb function needs a positional argument, i.e. event name.
-The holiday name is a necessary entry to get the function output.
-Additionally, the user can input some other arguments.
-The ‘help’ argument calls for user support in setting valid entries.
-'''
 
-# First, a list of valid entries is set.
-itaholidays = dtvnt.values()
+parsing_input()
 
-
-# Then, a function relying on the argparse module is defined.
-def parseholidays():
-
-    # Note: a description of the functionality is included.
-    parser = argparse.ArgumentParser(description="A program to pass holidays \
-    names to the italianceleb function")
-
-    # Positional and optional arguments are set.
-    parser.add_argument("holiname", help="The string of the holiday name",
-                        choices=itaholidays)
-
-    args = parser.parse_args()
-    return italianceleb(args.date)
-
-
-'''
-We use argparse to parse the arguments through the leapyear function
-'''
-
-
-# Define a function relying on the argparse module
-def parse_leapyear():
-
-    # Create the parser
-    parser = argparse.ArgumentParser(description="Given year returns whether \
-    it is a leapyear or not")
-
-    # Add the argument required
-    parser.add_argument("year", type=str,  help="Insert the year in yyyy \
-    format")
-
-    # Run the argument
-    args = parser.parse_args()
-    return leapyear(args)
-
-
-'''
-With argparse we are once again parsing the arguments to be passed to the
-weekday function.
-With this particular function we need a positional argument which allows the
-user to input the desired date.
-'''
-
-
-def weekday():
-    # We create the parser
-    parser = argparse.ArgumentParser(description="Given date returns the day \
-    of the week")
-
-    # We add the argument required
-    parser.add_argument("--wday", type=str,  help="insert the date in \
-    yyyy-mm-dd format")
-
-    # We  run it
-    args = parser.parse_args()
-    return weekday(args)
-
-
-'''
-With argparse we are parsing the arguments through the countdown function
-'''
-
-
-# First, a function relying on the argparse module is defined
-def countdownparser():
-
-    # We create the parser with a description of the functionality
-    parser = argparse.ArgumentParser(description="Countdown to a specific \
-    date")
-
-    # We add the argument
-    parser.add_argument("--to-date", metavar="YYYY-MM-DD", type=str,
-                        help="Insert the date in format YYYY-MM-DD")
-
-    # We run it
-    args = parser.parse_args()
-    return countdown(args)
+# python3 main.py -h
+# python3 main.py --date 2021-01-01
+# python3 main.py --date 2021-12-25
+# python3 main.py --holiname Christmas Day --> è da sistemare lo spazio, ma forse ho trovato codice
+# python3 main.py --year 2022
+# python3 main.py --wday 2022-02-12
+# python3 main.py --todate 2022-02-12
