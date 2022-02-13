@@ -3,7 +3,7 @@ Lab of Software Project Development <br/>
 [ET7018] LAB OF SOFTWARE PROJECT DEVELOPMENT (ET7) - a.a. 2021-22
 
 ### Dear reader, MAVen team is pleased to welcome you to our project! 
-### This is a group assignment for the final exam of Lab of SPD, a course attended by H-Farm BSc third-year students.
+This is a group assignment for the final exam of Lab of SPD, a course attended by H-Farm BSc third-year students.<br/>
 The MAVen package folder in this GitHub repository contains a series of files, each of them corresponding to a 
 functionality to apply to the holiday.csv file. The way each file has to be interpreted, i.e. its usage, is 
 illustrated below.
