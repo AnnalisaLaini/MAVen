@@ -9,7 +9,7 @@ def parsing_input():
 
     parser = argparse.ArgumentParser(description="The program works with dates and italian holidays.\
                                                  Please insert dates in the yyyy-mm-dd format and, if the name of an\
-                                                 holiday contains spaces, wrap the name around quotes ("")")
+                                                 holiday contains spaces, wrap the name around quotes (\"\")")
 
 
     parser.add_argument("--date",
@@ -19,7 +19,7 @@ def parsing_input():
 
     parser.add_argument("--holiname",
                         help="Name of the holiday to know if it is an italian celebration or not.\
-                             If the name of the holiday contains spaces, please wrap it around quotes ("")")
+                             If the name of the holiday contains spaces, please wrap it around quotes (\"\")")
 
     parser.add_argument("--year",
                         help="Enter a year to know if it is a leap year or not.")
@@ -29,7 +29,8 @@ def parsing_input():
                              Please insert the date in the yyyy-mm-dd format.")
 
     parser.add_argument("--todate",
-                        help="Enter a date to know the countdown")
+                        help="Enter a date to know the countdown. \
+                             Please insert the date in the yyyy-mm-dd format.")
 
 
     args = parser.parse_args()
