@@ -18,10 +18,10 @@ class TestInput(unittest.TestCase):
     # Wrong inputs
     def test_not_leapyear(self):
         # You should input wrong data
-        self.assertEqual(leapyear.leapyear("hello"), "Input date is\
-        not valid")
-        self.assertEqual(leapyear.leapyear("twothousand"), "Input date is\
-        not valid")
+        self.assertEqual(leapyear.leapyear("hello"), 
+                         "Input date is not valid")
+        self.assertEqual(leapyear.leapyear("twothousand"), 
+                         "Input date is not valid")
 
     # Corner case: empty string
     def test_emptyentry(self):
