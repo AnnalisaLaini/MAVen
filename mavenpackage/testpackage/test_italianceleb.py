@@ -21,8 +21,8 @@ class TestInput(unittest.TestCase):
     def test_nonitalian(self):
         # You should input wrong data
         self.assertEqual(italianceleb.italianceleb("Thanksgiving Day"),
-                         "Nope" + ", Italians do not celebrate\
-                         Thanksgiving Day.")
+                         "Nope" +
+                         ", Italians do not celebrate Thanksgiving Day.")
 
     # Invalid inputs
     def test_wrongvalues(self):
