@@ -2,8 +2,8 @@
 Lab of Software Project Development <br/>
 [ET7018] LAB OF SOFTWARE PROJECT DEVELOPMENT (ET7) - a.a. 2021-22
 
-### Dear reader, MAVen team is pleased to welcome you to our project! This is a group assignment for the final exam of 
-### Lab of SPD, a course attended by H-Farm BSc third-year students.
+### Dear reader, MAVen team is pleased to welcome you to our project! 
+### This is a group assignment for the final exam of Lab of SPD, a course attended by H-Farm BSc third-year students.
 The MAVen package folder in this GitHub repository contains a series of files, each of them corresponding to a 
 functionality to apply to the holiday.csv file. The way each file has to be interpreted, i.e. its usage, is 
 illustrated below.
@@ -16,7 +16,7 @@ that occurs in that specific time.
 by the user. 
 - 🎊 **leap year.py** 🎊 : The leapyear function allows the user to know whether a year is a leap one or not. 
 - 🤌🏻 **italian celeb.py** 🤌🏻 : The italianceleb function allows the user to know whether an event is an Italian 
-holiday or not. <br/>In practice, the user has to provide a valid holiday name and, in turn, the function will tell 
+holiday or not. In practice, the user has to provide a valid holiday name and, in turn, the function will tell 
 whether Italians celebrate it or not. <br/>As explained for the return_event function, by “valid holiday name” the 
 software means a holiday name that is present in the dtvnt list. <br/> If the name of the holiday contains spaces, 
 the user has to wrap the name around quotes (\"\") 
