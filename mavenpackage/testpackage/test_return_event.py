@@ -23,7 +23,7 @@ class TestInput(unittest.TestCase):
         # You should input wrong data
         self.assertEqual(return_event.return_event("St. Stephen's Day"),
                          "Sadly, we don't know what is" +
-                         "celebrated on St. Stephen's Day")
+                         " celebrated on St. Stephen's Day")
 
         # Note: the following test passing an empty list will fail!
         # self.assertEqual(return_event.return_event([]), None)
