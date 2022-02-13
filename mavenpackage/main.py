@@ -65,10 +65,3 @@ def parsing_input():
 
 parsing_input()
 
-# python3 main.py -h
-# python3 main.py --date 2021-01-01
-# python3 main.py --date 2021-12-25
-# python3 main.py --holiname "Christmas Day"
-# python3 main.py --year 2022
-# python3 main.py --wday 2022-02-12
-# python3 main.py --todate 2022-02-12
