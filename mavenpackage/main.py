@@ -13,12 +13,12 @@ def parsing_input():
 
 
     parser.add_argument("--date",
-                        help="Date for which you want to know if there is an event.\
+                        help="Enter a date for which you want to know if there is an event.\
                              Please insert the date in the yyyy-mm-dd format.")
 
 
     parser.add_argument("--holiname",
-                        help="Name of the holiday to know if it is an italian celebration or not.\
+                        help="Enter the name of an holiday to know if it is an italian celebration or not.\
                              If the name of the holiday contains spaces, please wrap it around quotes (\"\")")
 
     parser.add_argument("--year",
